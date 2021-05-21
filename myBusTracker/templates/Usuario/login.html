@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="{% static 'login.css'%}">
+    <link rel="stylesheet" href="{% static 'normalize.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+   {%block titulo%}
+    <title>Login</title>
+    {%endblock%}
+</head>
+<body>
+{% block content %}
+
+<div class="contenedor centrar">
+        <div class="contenedor_image">
+        </div>
+    <div class="contenedor_login">
+<form name="forma" method="post">
+            <div class="img_mio ">
+                    <img class="" src="{% static 'img/iconomio2.png'%}">
+            </div>
+<h1>¡Bienvenido a <i>MyBusTracker!</i></h1>
+	<input type="hidden" name="csrfmiddlewaretoken" value="RiwfRedRgKyd7hNasc2OLzwgBqlFBfJbicpHNmmJ8BO1C6w27oFQb52OriDEjjLm">
+	<div class="elemento">
+            {% csrf_token %}
+    <p><label class="elemento_label" for="id_username">Usuario:</label> <input class="elemento_input" placeholder="Ingresa tu usuario" type="text" name="username" required="" id="id_username"></p>
+    <p><label class="elemento_label" for="id_password">Contraseña:</label> <input class="elemento_input" placeholder="Ingresa tu contraseña" type="password" name="password" required="" id="id_password"></p>
+   </div>
+      <div class="elemento ">
+	<button class="elemento_input_sesion" type="submit" id="submit">Iniciar Sesión</button>
+     </div>
+
+    <p class="palabra_registrar ">¿No estas registrado? <a class="palabra_registrar_link" href="{% url 'registro'%}">Registrate</a></p>
+</form>
+    </div>
+</div>
+{% endblock%}
+</body>
+</html>

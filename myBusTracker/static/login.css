@@ -1,0 +1,119 @@
+:root {
+    --background: #1E2126;
+    --negroOscuro: #16191C;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    width:100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+
+    background: var(--background);
+    font-family: 'Mulish', sans-serif;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.contenedor{
+    margin: 6rem auto 7rem;
+    width: 100rem;
+    height: 50rem;
+    padding: 3rem;
+    background: #16191C;
+    border-radius: 2rem;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    padding: 0;
+
+}
+.contenedor_login{
+    color: #fff;
+    border-radius: 2rem;
+    width: 50%;
+    min-height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 50rem;
+}
+.contenedor_image{
+    border-top-width: 10rem;
+    background-image: url("https://i.postimg.cc/3NH0YR3j/image-1-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-end-start-radius: 2rem;
+    border-top-left-radius: 2rem;
+    width: 50%;
+    height: 100%;
+}
+.elemento{
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+.elemento_label{
+    margin-bottom: .4rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+}
+.elemento_input{
+    background-color: #1E2126;
+    height: 2.9rem;
+    width: 35rem;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elemento_input::shadow{
+    background-color: #1E2126;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+.elemento_input_sesion{
+    background: linear-gradient(#3969FC, #2A49FF);
+    height: 3rem;
+    width: 35rem;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.img_mio{
+    width:180px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: -60px;
+}
+.palabra_registrar{
+    font-size: 1.6rem;
+}
+.palabra_registrar_link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}

@@ -22,7 +22,7 @@ class UsuarioLoginFormulario(forms.Form):
             if not user.is_active:
                 raise forms.ValidationError("Este usuario no esta activo")
 
-        return super(UsuarioLoginFormulario, self).clean(*args, **kwargs)
+        return super(UsuarioLoginFormulario, self).clean(*args, **kwargs )
 
 class RegistroFormulario(UserCreationForm):
     email = forms.EmailField(required=True)
