@@ -1,0 +1,17 @@
+{% extends 'inicio.html' %}
+{% load staticfiles %}
+
+{% block titulo %}
+  {{ detalle_post.buses }}
+{% endblock titulo %}
+
+
+{% block titulo_principal %}
+   <h1>{{ detalle_post.buses }}</h1>
+   <p>{{ detalle_post.descripcion }}</p>
+{% endblock titulo_principal %}
+
+{% block barra_busqueda %}
+{% endblock barra_busqueda %}
+
+

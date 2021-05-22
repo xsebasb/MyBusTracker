@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'applications.registro',
+    'applications.bus',
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,14 @@ WSGI_APPLICATION = 'myBusTracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'busTrackerBD',
+        'USER': 'postgres',
+        'PASSWORD': '2608',
+        'HOST': 'localhost',
+        'DATABASE_PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

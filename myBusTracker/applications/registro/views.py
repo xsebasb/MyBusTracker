@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import RegistroFormulario, UsuarioLoginFormulario
@@ -9,6 +9,7 @@ def inicio(request):
         'bienvenido': 'Binevenido'
     }
     return render(request, 'inicio/inicio.html', context)
+
 
 def loginView(request):
     titulo = 'login'
