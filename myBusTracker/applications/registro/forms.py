@@ -37,3 +37,4 @@ class RegistroFormulario(UserCreationForm):
             'password1',
             'password2'
         ]
+        helps_texts = {k: "" for k in fields }

@@ -18,7 +18,7 @@ def loginView(request):
         passsword = form.cleaned_data.get("passsword")
         usuario = authenticate(username=username, password=passsword)
         login(request, usuario)
-        return redirect('/')
+        return redirect('inicio')
     context={
         'form':form,
         'titulo': titulo
@@ -40,3 +40,8 @@ def registro(request):
         'titulo':titulo
     }
     return render(request, 'Usuario/registro.html', context)
+
+
+def logout_vista(request):
+    logout(request)
+    return redirect('/')

@@ -25,19 +25,7 @@ body{
 
 
 }
-ul{
 
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-}
-ul.errorlist{
-
-    font: 0/0 a;
-  text-shadow: transparent;
-  color: transparent;
-  text-decoration: none;
-}
   p{
     font-family: var(--fuenteHeader);
     margin-bottom: 1rem;
@@ -88,11 +76,11 @@ input::shadow{
     margin-top: 1.5rem;
     cursor: pointer;
 }
+li{
+color: #fff;
+}
 .helptext{
-font: 0/0 ;
-  text-shadow: transparent;
-  color: transparent;
-  text-decoration: none;
+    font-size: 1rem;
 }
 .centrar{
         position: absolute;

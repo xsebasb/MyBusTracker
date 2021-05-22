@@ -13,13 +13,23 @@
 </head>
 <body>
 
-    <form class="contenedor " action="" method="POST">
+
+<form class="contenedor " action="" method="POST">
         <div class="centrar">
-        {% csrf_token %}
-        {{formulario.as_p}}
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="rCE4tqugb4iNZjEdZbyYDo21lHvtOmHJa4CkMBwwNRI9HXxcAlw4UQe0t5cDrvGb">
+       {% csrf_token %}
+<p><label for="id_name">Nombre:</label> <input type="text" name="name" required="" id="id_name"></p>
+
+<p><label for="id_username">Nombre de usuario:</label> <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username"> <span class="helptext">Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ </span></p>
+
+<p><label for="id_email">Email:</label> <input type="email" name="email" required="" id="id_email"></p>
+
+<p><label for="id_password1">Contraseña:</label> <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1"> <span class="helptext"></span></p><ul><li>Su contraseña no puede asemejarse tanto a su otra información personal.</li><li>Su contraseña debe contener por lo menos 8 caracteres.</li><li>Su contraseña no puede ser una clave utilizada comúnmente.</li><li>Su contraseña no puede ser completamente numérica.</li></ul><p></p>
+
+<p><label for="id_password2">Contraseña (confirmación):</label> <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2"> <span class="helptext">Para verificar, ingrese la misma contraseña anterior.</span></p>
         <button class="btn_register" type="submit">Registrarse</button>
             </div>
     </form>
-
 </body>
 </html>
