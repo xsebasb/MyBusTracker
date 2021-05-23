@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
           <div class="col-md-12 search">
-            <form method="get">
+            <form action="{% url 'listado' %}" method="get">
                 <div id="custom-search-input">
                   <div class="input-group col-md-12">
                     <input type="text" class="form-control" placeholder="Buscar..." name="buscar" value = "{{ request.GET.buscar }}">
@@ -27,26 +27,6 @@
       </div>
  <!-- Main Content -->
 
-     {{ detalle_post.buses }}
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          {% block contenido %}
-          {% if Bus %}
-            {% for x in Bus %}
-                <div class="post-preview">
-                  <a href="{% url 'bus:detalle_post' x.slug %}">
-                    <h2 class="post-title">
-                      {{ x.buses }}
-                    </h2>
-                  </a>
-                </div>
-                <hr>
-            {% endfor %}
-          {% else %}
-            <h1>No existen post registrados!</h1>
-          {% endif %}
-          {% endblock contenido %}
 
         </div>
       </div>

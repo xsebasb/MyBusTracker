@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'myBusTracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'busTrackerBD',
+        'NAME': 'busesBD',
         'USER': 'postgres',
         'PASSWORD': '2608',
         'HOST': 'localhost',
