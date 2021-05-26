@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from .forms import RegistroFormulario, UsuarioLoginFormulario
 # Create your views here.
 
-def inicio(request):
+def inicioRegistro(request):
     context = {
         'bienvenido': 'Binevenido'
     }
@@ -45,4 +45,4 @@ def registro(request):
 
 def logout_vista(request):
     logout(request)
-    return redirect('/')
+    return redirect('login')

@@ -1,17 +1,44 @@
-{% extends 'inicio.html' %}
-{% load staticfiles %}
+{% extends "inicio/inicio.html" %}
+{% block cuerpo%}
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 search">
+            <form method="GET">
+                <div id="custom-search-input">
+                  <div class="input-group col-md-12">
+                    <input type="text" class=" tamano_barra" placeholder="Buscar..." name="buscar" value = "{{ request.GET.buscar }}">
+                    <span class="input-group-list">
+                      <i class="icon icon-search"></i>
+                      <button type="submit" class="boton btn-success">Buscar</button>
+                    </span>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+ <!-- Main Content -->
 
-{% block titulo %}
-  {{ detalle_post.buses }}
-{% endblock titulo %}
+<!--
+ <a class="dropdown-item" href="{% url 'logout_vista' %}">Logout</a>
+-->
+<div class="row container">
+
+        {% if Bus %}
+        {% for x in Bus %}
+        <div class="col-xl-3 col-md-4">
+            <div class="card text-black mb-4 card-body ">
+                <div class="card-ruta centrado">
+                <div class="color_font"><strong>Ruta: </strong>{{ x.buses }}</div>
+                    </div>
+                <div class="font_desc"><strong class="strong_des">Descripcion: </strong>{{ x.descripcion }}</div>
 
 
-{% block titulo_principal %}
-   <h1>{{ detalle_post.buses }}</h1>
-   <p>{{ detalle_post.descripcion }}</p>
-{% endblock titulo_principal %}
-
-{% block barra_busqueda %}
-{% endblock barra_busqueda %}
-
-
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h4 class="card container text_no_found">¡No existe la ruta {{ request.GET.buscar }} registrada!</h4>
+        {% endif %}
+    </div>
+{%endblock%}
