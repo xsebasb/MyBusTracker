@@ -1,98 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
-  <title>Title page</title>
-<link rel="stylesheet" href="{% static 'index.css'%}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 </head>
+<body>
 
-<body> <!-- Add your content of header -->
-<header>
-  <nav class="navbar navbar-default active">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'inicio' %}" title="">
-         <img src="{% static 'assets/images/mashup-icon.svg' %}" class="navbar-logo-img" alt="">
-          myBusTracker
-        </a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="./index.html" title="">Perfil</a></li>
-          <li><a href="./project.html" title="">Informacion</a></li>
-          <li><a href="{% url 'busqueda'%}" title="">Buscar rutas</a></li>
-
-
-          <li>
-            <p>
-              <a href="{% url 'logout_vista' %}" class="btn btn-default navbar-btn" title="">Cerrar sesion</a>
-            </p>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-{%block cuerpo%}
-
-<div class="section-container">
-
-<div class="contenedor_login container">
-
-  <iframe style="position: absolute; top: -9999em; visibility: hidden;" allowTransparency="true" scrolling="no" onload="window.parent.scrollTo(0,0); this.style.position='static'; this.style.visibility='visible';" src="https://moovitapp.com/cali-1462/lines/en?customerId=4908&ref=2&poiType=line" width="620" height="620" class="col-xs-12" frameborder="0"></iframe>
-</div>
-</div>
-{%endblock%}
-
-
-
-
-<footer class="footer-container white-text-container">
-  <div class="container">
-    <div class="row">
-
-
-      <div class="col-xs-12">
-        <h3>MyBusTracker</h3>
-
         <div class="row">
-          <div class="col-xs-12 col-sm-7">
-            <p><small>Web creada por Juan Sebastian Bolaños - Samuel Martinez<a href="http://www.mashup-template.com/" title="Create website with free html template"></a></small>
-            </p>
-          </div>
-          <div class="col-xs-12 col-sm-5">
-            <p class="text-right">
-              <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </p>
+          <div class="col-md-12 search">
+            <form method="get">
+                <div id="custom-search-input">
+                  <div class="input-group col-md-12">
+                    <input type="text" class="form-control" placeholder="Buscar..." name="buscar" value = "{{ request.GET.buscar }}">
+                    <span class="input-group-list">
+                      <i class="icon icon-search"></i>
+                      <button type="submit" class="boton btn-success">Buscar</button>
+                    </span>
+                  </div>
+                </div>
+            </form>
           </div>
         </div>
+      </div>
+ <!-- Main Content -->
 
+     {{ detalle_post.buses }}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          {% block contenido %}
+          {% if Bus %}
+            {% for x in Bus %}
+                <div class="post-preview">
+                  <a href="{% url 'bus:detalle_post' x.slug %}">
+                    <h2 class="post-title">
+                      {{ x.buses }}
+                    </h2>
+                  </a>
+                </div>
+                <hr>
+            {% endfor %}
+          {% else %}
+            <h1>No existen post registrados!</h1>
+          {% endif %}
+          {% endblock contenido %}
 
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+
 </body>
 </html>

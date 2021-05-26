@@ -75,11 +75,14 @@ WSGI_APPLICATION = 'myBusTracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'busTrackerBD',
+        'USER': 'postgres',
+        'PASSWORD': '2608',
+        'HOST': 'localhost',
+        'DATABASE_PORT': '5432',
     }
 }
 
