@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model, authenticate
 
-user = get_user_model()
+
 
 class UsuarioLoginFormulario(forms.Form):
     username = forms.CharField()
@@ -22,7 +22,7 @@ class UsuarioLoginFormulario(forms.Form):
             if not user.is_active:
                 raise forms.ValidationError("Este usuario no esta activo")
 
-        return super(UsuarioLoginFormulario, self).clean(*args, **kwargs )
+        return super(UsuarioLoginFormulario, self).clean(*args, **kwargs)
 
 class RegistroFormulario(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -37,4 +37,3 @@ class RegistroFormulario(UserCreationForm):
             'password1',
             'password2'
         ]
-        helps_texts = {k: "" for k in fields }

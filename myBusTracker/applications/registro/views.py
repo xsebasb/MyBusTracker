@@ -16,8 +16,8 @@ def loginView(request):
     form = UsuarioLoginFormulario(request.POST or None)
     if form.is_valid():
         username = form.cleaned_data.get("username")
-        passsword = form.cleaned_data.get("passsword")
-        usuario = authenticate(username=username, password=passsword)
+        password = form.cleaned_data.get("password")
+        usuario = authenticate(username=username, password=password)
         login(request, usuario)
         return redirect('inicio')
     context={
