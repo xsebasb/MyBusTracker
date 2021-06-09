@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Web diseñasa por programadores de la USB-CALI" name="author">
+  <title>MyBusTracker</title>
+<link  rel="icon"   href="{% static 'img/Iconomio2.png'%}" type="image/png" />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="{% static 'index.css'%}">
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+
+
+
+</head>
+
+<body> <!-- Add your content of header -->
+<header>
+  <nav class="navbar navbar-default active">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+         <a class="navbar-brand" href="{% url 'inicio' %}" title="">
+
+         <img class="tamno_bus navbar-logo-img" src="{% static 'assets/images/iconotracker.png' %}" alt="">
+          <b><i>myBusTracker</i></b>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'perfil'%}" title="">Perfil</a></li>
+          <li><a href="{% url 'informacion'%}" title="">Información rutas</a></li>
+          <li><a href="{% url 'covid'%}" title="">Autocuidado covid-19</a></li>
+          <li><a href="{% url 'busqueda'%}" title="">Buscar rutas</a></li>
+
+
+          <li>
+            <p>
+              <a href="{% url 'logout_vista' %}" class="btn btn-default navbar-btn" title="">Cerrar sesion</a>
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+{%block cuerpo%}
+<!-- partial:index.partial.html -->
+
+ <h1 class="container text-center edit_text">Casos Covid-19 en <span id="country"></span> <img class="img_covid" src="" alt="" id="flag"></h1>
+<div class="container text-center column-bloc center">
+
+
+  <div class="card-deck text-center">
+        <div class="animatediv">
+  <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+  <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+  <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+  <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+          <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+        <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+             <img class="img_covid" src="https://atheistiran.com/wp-content/uploads/2020/03/corona-virus.png">
+
+
+</div>
+    <div class="card mb-2">
+      <div class="card-body-2 bg-primary text-light rounded">
+        <h5 class="card-title"><i class="fas fa-tachometer-alt fa-2x"></i></h5>
+        <h4 class="card-text">Casos Activos</h4>
+        <p class="card-text badge badge-outline-light" id="Active_Cases">21</p>
+      </div>
+    </div>
+
+
+    <div class="card mb-2">
+      <div class="card-body-2 bg-info text-light rounded">
+        <h5 class="card-title"><i class="fas fa-list fa-2x"></i></h5>
+        <h4 class="card-text">Total Casos</h4>
+        <p class="card-text badge badge-outline-light" id="Total_Cases">21</p>
+      </div>
+    </div>
+    <div class="card mb-2">
+      <div class="card-body-2 bg-warning text-light rounded">
+        <h5 class="card-title"><i class="fas fa-times-circle fa-2x"></i></h5>
+        <h4 class="card-text">Casos Criticos</h4>
+        <p class="card-text badge badge-outline-light" id="Critical_Cases">21</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body-2 bg-danger text-light rounded">
+        <h5 class="card-title"><i class="fa fa-times fa-2x"></i></h5>
+        <h4 class="card-text">Total De Muertes</h4>
+        <p class="card-text badge badge-outline-light" id="Total_Death">21</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body-2 bg-success text-light rounded">
+        <h5 class="card-title"><i class="fas fa-check-square fa-2x"></i></h5>
+        <h4 class="card-text">Casos Recuperados</h4>
+        <p class="card-text badge badge-outline-light" id="Recovered_Cases">21</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body-2 bg-secondary text-light rounded">
+        <h5 class="card-title"><i class="fas fa-eye fa-2x"></i></h5>
+        <h4 class="card-text">Pruebas total realizadas</h4>
+        <div class="tamano_bdge">
+        <p class="card-text badge" id="Total_Test_Done">21</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="centrar_img_cuidado">
+ <div class="card_numero ">
+     <h1 class="titulo_numerologia tamano_tips">Tips Autocuidado</h1>
+        </div>
+  </div>
+<div class="contenedor_rutas ">
+
+  <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_01-1-640x640.jpg" alt="">
+        </div>
+
+      <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_03-1080x1080.jpg" alt="">
+        </div>
+
+     <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_Mesa-de-trabajo-1-copia-6-1080x1080.jpg" alt="">
+        </div>
+
+        <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_02-640x640.jpg" alt="">
+        </div>
+
+
+    </div>
+
+<div class="contenedor_rutas ">
+  <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_Mesa-de-trabajo-1-copia-20-1080x1080.jpg" alt="">
+        </div>
+
+      <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_Mesa-de-trabajo-1-copia-24-1080x1080.jpg" alt="">
+        </div>
+
+     <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_Mesa-de-trabajo-1-copia-12-1080x1080.jpg" alt="">
+        </div>
+
+        <div class="card-body centrar_img_cuidado">
+          <img class="img_cuidado" src="https://www.cruzrojacolombiana.org/wp-content/uploads/2020/03/Post-Coronavirus_CRC_Mesa-de-trabajo-1-copia-18-1080x1080.jpg" alt="">
+        </div>
+
+
+    </div>
+<div class="content-text-covid container contenedor_medidas_cv ">
+  <h1>A. Medidas sugeridas por el Ministerio de Salud</h1>
+<p>Algunas de las recomendaciones de prevención oficiales son:</p>
+
+<p>Asumir con seriedad las pautas de autocuidado y responsabilidad por el estado de salud individual y ofrecer información clara, completa, veraz y oportuna, a las entidades competentes, sobre las condiciones de salud que deban ser notificadas.</p>
+<p>Lavarse las manos frecuentemente con agua y jabón por 20 segundos. Especialmente antes y después del uso del transporte público, visitas a cafeterías, auditorios, aulas, recintos públicos y baños. Según el Ministerio de Salud, esta práctica reduce en un 50% el riesgo de contagio. Si no cuenta con agua ni jabón, usar un desinfectante de manos que contenga por lo menos un 60% de alcohol.</p>
+<p>Evitar los saludos de beso, abrazo o de mano.</p>
+<p>Mantener las aulas y espacios de trabajo ventilados, limpios, iluminados y libres de humo.</p>
+<p>Evitar tocarse los ojos, la nariz y la boca.</p>
+<p>Estornudar o toser cubriéndose la nariz y la boca con el antebrazo o usando un pañuelo desechable.</p>
+<p>Limpiar y desinfectar los objetos y las superficies de uso frecuente.</p>
+<p>No usar los equipos de oficina, computadores, teléfonos y otros equipos de los compañeros.</p>
+</div>
+
+{%endblock%}
+
+
+
+
+<footer class="footer-container white-text-container">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-xs-12">
+        <h3>MyBusTracker</h3>
+
+        <div class="row">
+
+          <div class="col-xs-12 col-sm-7">
+            <p><small>Web creada por Juan Sebastian Bolaños - Samuel Martinez<a href="http://www.mashup-template.com/" title="Create website with free html template"></a></small>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <p class="text-right">
+              <a href="https://github.com/xsebasb/MyBusTracker/" class="social-round-icon white-round-icon fa-icon" title="">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </p>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="{% static 'script.js'%}"></script>
+</body>
+</html>

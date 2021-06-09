@@ -20,11 +20,22 @@
     margin-top: 0px;
 
 }
+.contenedor_rutas{
+
+    border-radius: 2rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 50rem;
+    margin-top: 0px;
+}
 
 .center
 {
-  height:100vh;
-  width:100%;
+
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +63,21 @@
 .tamano_barra{
     width: 600px;
 
-}
 
+}
+.card_numero{
+  margin-left: 20px;
+  margin-top: 20px;
+  height:10rem;
+  width:50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:16px;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+    margin-bottom: 20px;
+}
 .card-body{
    margin-left: 20px;
   margin-top: 20px;
@@ -75,6 +99,73 @@
   align-items: center;
   justify-content: center;
 }
+.card-ruta_verde{
+    background-color: #6EE206;
+    opacity: .8;
+     border-radius:16px;
+    width: 180px;
+    height: 50px;
+    margin: auto;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.card-ruta_numerologia{
+background-color: #C8C8C8;
+    opacity: .9;
+     border-radius:15px;
+
+    width: 180px;
+    height: 200px;
+    margin: 0 auto;
+
+    align-items: center;
+
+}
+.contenedor_img_numero{
+   margin-left: 20px;
+  margin-top: 20px;
+  height:50rem;
+  width:50rem;
+  border-radius:16px;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+.contenedor_medidas_cv{
+   margin-left: 20px;
+  margin-top: 20px;
+  height:55rem;
+  width:100rem;
+  border-radius:16px;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+}
+.contenedor_img_dos{
+
+    margin: 1rem 1rem 1rem 1rem;
+}
+.centrado_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letra_numerolo{
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 0px 5px 15px;
+    padding-top: 10px;
+    font-weight: 900;
+}
+.titulo_numerologia{
+    color: #0B3B7D;
+}
+.titulos_rutas{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
 .color_font{
 color: #fff;
 }
@@ -89,12 +180,13 @@ font-size: 12px;
     font-size: 60px;
 }
 
-/* Social Icons */
+.tamno_bus
+{
 
-.
-/* Property Cards Hover States */
+    width: 80px;
+    height: 50px;
 
-
+}
 
 
 

@@ -1,0 +1,344 @@
+
+.card-deck {
+  margin: 0 -25px;
+  justify-content: center;
+}
+.card p {
+  font-size: 4rem;
+  border: 1px solid #fff;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: consolas;
+}
+.img_covid {
+  width: 70px;
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-deck .card {
+    flex: 0 0 48.7%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-deck .card {
+    flex: 0 0 32%;
+  }
+}
+@media (min-width: 992px) {
+  .card-deck .card {
+    flex: 0 0 24%;
+  }
+}
+.animatediv img:nth-child(1) {
+  position: absolute;
+  right: -6rem;
+  top: -8rem;
+}
+.animatediv img:nth-child(2) {
+  position: absolute;
+
+  right: 60rem;
+  top: 33rem;
+}
+.animatediv img:nth-child(3) {
+  position: absolute;
+  left: -6rem;
+  bottom: -42rem;
+}
+.animatediv img:nth-child(4) {
+  position: absolute;
+  left: -37rem;
+  bottom: -42rem;
+}
+.animatediv img:nth-child(5) {
+  position: absolute;
+    right: 66rem;
+  top: -8rem;
+}
+.animatediv img:nth-child(6) {
+position: absolute;
+  left: 13rem;
+  bottom: -32rem;
+}
+.animatediv img:nth-child(7) {
+  position: absolute;
+    right: 76rem;
+  top: 14rem;
+}
+.animatediv {
+  animation: MoveUpDown 10s linear infinite alternate-reverse;
+  position: absolute;
+  right: 300px;
+}
+/* position of corona animation */
+@-webkit-keyframes MoveUpDown {
+  0%,
+  100% {
+    top: 150px;
+  }
+  50% {
+    top: 250px;
+  }
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    top: 150px;
+  }
+  50% {
+    top: 250px;
+  }
+}
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+a.bg-primary:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #0062cc !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+a.bg-secondary:hover, a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: #545b62 !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+a.bg-success:hover, a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: #1e7e34 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+a.bg-info:hover, a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #117a8b !important;
+}
+
+.card-body-2{
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  height: 200px;
+  width: 400px;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-link + .card-link {
+  margin-left: 1.25rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+a.bg-info:hover, a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #117a8b !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+a.bg-warning:hover, a.bg-warning:focus,
+button.bg-warning:hover,
+button.bg-warning:focus {
+  background-color: #d39e00 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+a.bg-danger:hover, a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+  background-color: #bd2130 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+a.bg-light:hover, a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: #dae0e5 !important;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+a.bg-dark:hover, a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: #1d2124 !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.border {
+  border: 1px solid #dee2e6 !important;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.border-left {
+  border-left: 1px solid #dee2e6 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+.border-right-0 {
+  border-right: 0 !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+.border-primary {
+  border-color: #007bff !important;
+}
+
+.border-secondary {
+  border-color: #6c757d !important;
+}
+
+.border-success {
+  border-color: #28a745 !important;
+}
+
+.border-info {
+  border-color: #17a2b8 !important;
+}
+
+.border-warning {
+  border-color: #ffc107 !important;
+}
+
+.border-danger {
+  border-color: #dc3545 !important;
+}
+
+.border-light {
+  border-color: #f8f9fa !important;
+}
+
+.border-dark {
+  border-color: #343a40 !important;
+}
+
+.border-white {
+  border-color: #fff !important;
+}
+
+.rounded-sm {
+  border-radius: 0.2rem !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+.card-text{
+ color: #fff;
+ font-size: 30px;
+ font-weight: bold;
+ background: 0;
+}
+.card-title{
+  color: #fff;
+}
+.edit_text{
+font-size: 3rem;
+font-weight: bold;
+}
+.img_cuidado{
+    height: 250px;
+    width: 250px;
+}
+.centrar_img_cuidado{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.tamano_tips{
+  font-size: 4rem;
+    font-weight: bold;
+}
