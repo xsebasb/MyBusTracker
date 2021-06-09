@@ -55,8 +55,8 @@
 
 <div class="section-container">
 <div class="contenedor_login container">
- {% if request.user.is_authenticated %}Welcome '{{ request.user.username }}'
-{% else %}<a href="{% url django.contrib.auth.login %}">Login</a>{% endif %}
+ {% if request.user.is_authenticated %}Welcome  '{{ request.user.email }}''{{ request.user.username }}' '{{ request.user.name }}'
+{% endif %}
   <iframe style="position: absolute; top: -9999em; visibility: hidden;" allowTransparency="true" scrolling="no" onload="window.parent.scrollTo(0,0); this.style.position='static'; this.style.visibility='visible';" src="https://moovitapp.com/cali-1462/lines/en?customerId=4908&ref=2&poiType=line" width="620" height="620" class="col-xs-12" frameborder="0"></iframe>
 </div>
 </div>
