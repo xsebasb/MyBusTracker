@@ -87,6 +87,7 @@
   -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 
+
 }
 .card-ruta{
     background-color: #097DEF;
@@ -187,7 +188,66 @@ font-size: 12px;
     height: 50px;
 
 }
+.elemento_input{
+    background-color: #1E2126;
+    height: 2.9rem;
+    width: 20rem;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 3px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elemento_input::shadow{
+    background-color: #1E2126;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+.display_column{
+    display: flex:
+    justify-content: row;
+}
+.tamno_profile{
+  width: 350px;
+    height: 150px;
+}
+.card-ruta_profile{
 
-
+    opacity: .8;
+     border-radius:16px;
+    width: 180px;
+    height: 50px;
+    margin: auto;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-ruta_id{
+background-color: #1E2126;
+    opacity: .8;
+     border-radius:16px;
+    width: 350px;
+    height: 50px;
+    margin: auto;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-body_profile{
+   margin-left: 20px;
+  margin-top: 20px;
+  height:17em;
+  width:30em;
+  border-radius:16px;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
 
 
